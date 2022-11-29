@@ -1,0 +1,80 @@
+.root
+  display: flex
+  flex-direction: column
+  min-height: 100%
+  background-color: #F5F5F5
+
+.main
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  flex-grow: 1
+  padding: 24px 15px
+
+  @media screen and (min-width: 1000px)
+    padding: 24px 15px 100px
+
+.circle
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 100px
+  height: 100px
+  border-radius: 50%
+  background-color: #fff
+
+.icon
+  width: 50px
+  height: 50px
+
+.iconTypeSuccess
+  fill: #83AC38
+
+.iconTypeFail
+  fill: #FF483E
+
+.title
+  margin-top: 20px
+  font-weight: 800
+  font-size: 40px
+  line-height: 48px
+  text-align: center
+
+.titleTypeSuccess
+  color: #83AC38
+
+.titleTypeFail
+  color: #FF483E
+
+.description
+  margin: 60px auto 0
+  font-weight: 500
+  font-size: 18px
+  line-height: 21px
+  text-align: center
+  color: #000000
+
+.descriptionTypeSuccess
+  max-width: 560px
+
+.descriptionTypeFail
+  max-width: 670px
+
+.button
+  display: flex
+  align-items: center
+  margin-top: 30px
+  background-color: transparent
+  border: none
+  padding: 0
+  font-weight: 600
+  font-size: 15px
+  line-height: 18px
+  color: #83AC38
+  cursor: pointer
+
+.arrow
+  margin-right: 5px
+  fill: #83AC38
+  transform: rotate(180deg)

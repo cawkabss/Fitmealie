@@ -1,0 +1,66 @@
+.root
+  padding: 60px 40px
+  background-color: #83AC38
+  background-image: url('./images/bg.png')
+  background-size: auto 100%
+  background-repeat: no-repeat
+  background-position: center
+
+  @media screen and (min-width: 1000px)
+    padding: 100px 20px
+
+.container
+  max-width: 925px
+  margin: 0 auto
+
+.row
+  display: flex
+  flex-direction: column
+  align-items: center
+
+  @media screen and (min-width: 1000px)
+    flex-direction: row
+
+.column
+  text-align: center
+
+  @media screen and (min-width: 1000px)
+    text-align: left
+  
+  & + &
+    margin-top: 30px
+
+    @media screen and (min-width: 1000px)
+      margin-top: 0
+      margin-left: 100px
+
+.img
+  border-radius: 50%
+  width: 200px
+  height: 200px
+
+  @media screen and (min-width: 1000px)
+    width: 370px
+    height: 370px
+
+.title
+  font-weight: 800
+  font-size: 24px
+  line-height: 29px
+  text-align: center
+
+  @media screen and (min-width: 1000px)
+    font-size: 40px
+    line-height: 48px
+    text-align: left
+
+.highlight
+  color: #fff
+
+.button
+  margin-top: 30px
+  padding: 20px 90px
+
+  @media screen and (min-width: 1000px)
+    margin-top: 40px
+

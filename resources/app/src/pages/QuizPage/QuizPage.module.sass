@@ -1,0 +1,49 @@
+.root
+  display: flex
+  flex-direction: column
+  min-height: 100%
+
+.main
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  flex-grow: 1
+  padding: 20px
+  background-color: #fff
+
+  @media screen and (min-width: 1000px)
+    background-image: url('./images/bg.jpg')
+    background-size: auto 100%
+    background-repeat: no-repeat
+    background-position-x: 100%
+
+.container
+  width: 100%
+  max-width: 640px
+  margin: 0 auto
+
+.backButton
+  display: flex
+  align-items: center
+  padding: 0
+  border: none
+  background-color: transparent
+  cursor: pointer
+
+  &:hover
+    opacity: 0.9
+
+.arrow
+  fill: #83AC38
+  margin-right: 20px
+  transform: rotate(180deg)
+
+.logo
+  fill: #83AC38
+
+.form
+  margin-top: 20px
+
+.step
+  margin-top: 30px

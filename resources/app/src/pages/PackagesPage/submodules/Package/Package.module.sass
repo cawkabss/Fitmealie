@@ -1,0 +1,104 @@
+.root
+  display: flex
+  align-items: stretch
+  width: 100%
+  min-height: 130px
+  padding: 20px
+  background: #fff
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2)
+  border: 2px solid transparent
+  border-radius: 15px
+  text-align: left
+  cursor: pointer
+
+.rootStateActive
+  border-color: #83AC38
+
+  .radio:after
+    content: ''
+    position: absolute
+    top: 50%
+    left: 50%
+    width: 15px
+    height: 15px
+    border-radius: 50%
+    background-color: #83AC38
+    transform: translate3d(-50%, -50%, 0)
+
+.radio
+  position: relative
+  display: inline-block
+  align-self: center
+  flex-shrink: 0
+  width: 28px
+  height: 28px
+  border: 3px solid #5D5D5D
+  border-radius: 50%
+
+.info
+  padding: 0 20px
+  align-self: center
+
+.label
+  display: inline-block
+  padding: 5px 20px
+  margin-bottom: 5px
+  border-radius: 26px
+  font-weight: 600
+  font-size: 10px
+  line-height: 12px
+  color: #fff
+  background-color: #83AC38
+
+.title
+  display: block
+  font-weight: 600
+  font-size: 18px
+  line-height: 21px
+  color: #212329
+
+  @media screen and (min-width: 1000px)
+    font-size: 24px
+    line-height: 29px
+
+.description
+  display: block
+  margin-top: 5px
+  font-size: 13px
+  line-height: 16px
+  color: #717276
+
+  @media screen and (min-width: 1000px)
+    font-size: 15px
+    line-height: 18px
+
+.price
+  display: flex
+  flex-direction: column
+  justify-content: center
+  min-width: 115px
+  padding-left: 20px
+  margin-left: auto
+  border-left: 1px solid #D7D7D8
+  font-weight: 600
+  font-size: 18px
+  line-height: 21px
+  text-align: center
+  color: #212329
+
+  @media screen and (min-width: 1000px)
+    font-size: 24px
+    line-height: 29px
+
+.period
+  font-weight: 400
+  font-size: 15px
+  line-height: 18px
+
+.oldPrice
+  display: block
+  margin-top: 10px
+  font-weight: 400
+  font-size: 14px
+  line-height: 17px
+  color: #808092

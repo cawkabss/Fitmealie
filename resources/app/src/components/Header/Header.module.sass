@@ -1,0 +1,117 @@
+.root
+  //
+
+.container
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: center
+  max-width: 1385px
+  width: 100%
+  margin: 0 auto
+  padding: 15px
+  background-color: #fff
+
+.logoLink
+  display: inline-block
+
+.logo
+  fill: #83AC38
+
+.nav
+  padding: 10px
+  display: none
+
+  @media screen and (min-width: 1000px)
+    display: block
+
+.navList
+  display: flex
+  align-items: center
+
+.navItem
+  display: flex
+  flex-direction: column
+
+  @media screen and (min-width: 1000px)
+    flex-direction: row
+    align-items: center
+  
+  & + &
+    margin-top: 45px
+
+    @media screen and (min-width: 1000px)
+      margin-top: 0
+      margin-left: 45px
+
+.navItemTypeAuth
+  position: relative
+  padding-left: 45px
+
+  &::after
+    content: '|'
+    position: absolute
+    top: 50%
+    left: 0
+    font-weight: 500
+    font-size: 20px
+    line-height: 24px
+    color: #292D35
+    transform: translateY(-50%)
+
+.navLink
+  font-size: 20px
+  line-height: 24px
+  font-weight: 600
+  color: #fff
+  text-decoration: none
+
+  &:hover
+    opacity: 0.9
+
+  @media screen and (min-width: 1000px)
+    color: #292D35
+
+.navLinkStateActive
+  color: #83AC38
+
+.button
+  padding: 15px 30px
+  font-weight: 500
+  font-size: 18px
+  line-height: 21px
+
+.burger
+  background: transparent
+  border: none
+  padding: 0
+  cursor: pointer
+
+  @media screen and (min-width: 1000px)
+    display: none
+
+.burgerIcon
+  fill: #000
+
+.email
+  font-weight: 500
+  font-size: 20px
+  line-height: 24px
+  color: #83AC38
+
+.logout
+  width: fit-content
+  padding: 10px 20px
+  margin-top: 20px
+  background: #EAEAEA
+  border: none
+  border-radius: 27px
+  font-weight: 500
+  font-size: 15px
+  line-height: 18px
+  color: #6C6C6C
+  cursor: pointer
+
+  @media screen and (min-width: 1000px)
+    margin-top: 0
+    margin-left: 10px
