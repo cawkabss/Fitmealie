@@ -1,5 +1,5 @@
 export enum PackageDuration {
-  Day,
-  Month,
-  Quarter
+  Day = 'Day',
+  Month = 'Month',
+  Quarter = 'Quarterly',
 }

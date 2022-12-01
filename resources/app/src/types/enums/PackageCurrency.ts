@@ -1,3 +1,3 @@
 export enum PackageCurrency {
-  USD,
+  USD = 'USD',
 }
