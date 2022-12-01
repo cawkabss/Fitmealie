@@ -13,7 +13,7 @@ export interface Response {
 }
 
 const register = async (payload: Payload) => {
-  const { data } = await axios.post('/api/login', payload);
+  const { data } = await axios.post('/api/register', payload);
 
   return data;
 };

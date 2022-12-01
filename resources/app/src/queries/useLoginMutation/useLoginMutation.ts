@@ -7,9 +7,10 @@ export interface Payload {
 }
 
 export interface Response {
-  user: {
+  user?: {
     email: string,
-  }
+  },
+  error?: string,
 }
 
 const login = async (payload: Payload) => {

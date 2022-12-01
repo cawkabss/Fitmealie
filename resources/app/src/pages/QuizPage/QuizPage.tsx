@@ -40,6 +40,12 @@ const STEPS = [
   PasswordStep,
 ];
 
+interface FormData {
+  email?: string,
+  password?: string,
+  [key: string]: string | undefined,
+}
+
 export const QuizPage = () => {
   const navigate = useNavigate();
   const queryClient = useQueryClient()
@@ -51,7 +57,7 @@ export const QuizPage = () => {
     },
   });
 
-  const [formData, setFormData] = useState({});
+  const [formData, setFormData] = useState<FormData>({});
   const [step, setStep] = useState(0);
 
   const handleHistoryBack = () => {
@@ -62,7 +68,7 @@ export const QuizPage = () => {
     }
   };
 
-  const handleStepSubmit = (data?: any) => {
+  const handleStepSubmit = (data?: FormData) => {
     if (data) {
       setFormData((prev) => ({
         ...prev,
@@ -71,7 +77,11 @@ export const QuizPage = () => {
     }
 
     if (step === STEPS.length - 1) {
-      mutate(data);
+      const payload = {
+        email: formData?.email || data?.email || '',
+        password: formData?.password || data?.password || '',
+      }
+      mutate(payload);
     } else {
       setStep((prev) => prev + 1);
     }
