@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 import { Package as PackageType} from 'types/interfaces/Package';
 
@@ -77,10 +77,27 @@ export const PackagesPage = () => {
 
               <Checkbox
                 className={css.terms}
-                label='I agree and accept Terms and Conditions and Privacy Policy'
                 checked={isTermsAccepted}
                 onChange={handleTermsToggle}
-              />
+              >
+                I agree and accept
+                &nbsp;
+                <Link
+                  className={css.link}
+                  to='/terms-of-use'
+                >
+                  Terms and Conditions
+                </Link>
+                &nbsp;
+                 and
+                 &nbsp;
+                 <Link
+                  className={css.link}
+                  to='/privacy-policy'
+                >
+                  Privacy Policy
+                </Link>
+              </Checkbox>
             </section>
             <section className={css.column}>
               <img

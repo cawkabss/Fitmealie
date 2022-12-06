@@ -1,9 +1,16 @@
+import React from 'react';
 import { Button } from 'UI/Button';
 import css from './CTASection.module.sass';
 
 import imgDesktop from './images/img.png';
 
-export const CTASection = () => {
+interface Props {
+  onGoToQuize: (e: React.SyntheticEvent<HTMLAnchorElement>) => void,
+}
+
+export const CTASection: React.FC<Props> = ({
+  onGoToQuize,
+}) => {
   return (
     <section className={css.root}>
       <div className={css.container}>
@@ -23,6 +30,7 @@ export const CTASection = () => {
               className={css.button}
               theme='accent'
               to='/quiz'
+              onClick={onGoToQuize}
               rounded
             >
               Take a quiz

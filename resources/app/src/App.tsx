@@ -5,6 +5,8 @@ import {
   useLocation,
 } from 'react-router-dom';
 
+import { useInitQuery } from 'queries/useInitQuery';
+
 import { IndexPage } from './pages/IndexPage';
 import { BlogPage } from './pages/BlogPage';
 import { BlogPostPage } from './pages/BlogPostPage';
@@ -17,17 +19,13 @@ import { PaymentPage } from 'pages/PaymentPage';
 import { PaymentStatusPage } from 'pages/PaymentStatusPage';
 
 import './styles.sass';
-import { useInitQuery } from 'queries/useInitQuery';
-import axios from 'axios';
 
 export const App = () => {
   const { pathname } = useLocation();
 
   const { isLoading } = useInitQuery();
 
-  useEffect(() => {
-    axios.get('/api/user').then((data) => console.log(data));
-  
+  useEffect(() => {  
     window.scrollTo({
       top: 0,
       behavior: 'smooth',

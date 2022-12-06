@@ -23,14 +23,14 @@ class User {
 
 abstract class PackageCurrency
 {
-    const USD = 0;
+    const USD = 'USD';
 }
 
 abstract class PackageDuration
 {
-    const Day = 0;
-    const Month = 1;
-    const Quarter = 2;
+    const Day = "Day";
+    const Month = "Month";
+    const Quarter = "Quarter";
 }
 
 class Package {
@@ -39,8 +39,10 @@ class Package {
         $name,
         $description,
         $price,
+        $recPrice,
         $currency,
         $duration,
+        $duration_int,
         $discount,
         $default,
         $trial
@@ -49,13 +51,31 @@ class Package {
       $this->name = $name;
       $this->description = $description;
       $this->price = $price;
+      $this->recPrice = $recPrice;
       $this->currency = $currency;
       $this->duration = $duration;
+      $this->duration_int = $duration_int;
       $this->discount = $discount;
       $this->default = $default;
       $this->trial = $trial;
     }
 }
+
+
+// {
+//     "id":"12474de1-4021-493d-8570-576385942512",
+//     "name":"Day Trial",
+//     "description":"Most Popular",
+//     "price":1.4,
+//     "recPrice":39.2,
+//     "currency":"USD",
+//     "duration":"Day",
+//     "durationRecurring ":"Month",
+//     "duration_int":28,
+//     "discount":30,
+//     "default":true,
+//     "trial":true
+//   }
 
 Route::get('/init', function () {
     return (object) [
@@ -66,8 +86,10 @@ Route::get('/init', function () {
                 '1 month plan',
                 'billed every month',
                 39.20,
+                39.20,
                 PackageCurrency::USD,
                 PackageDuration::Month,
+                28,
                 0,
                 FALSE,
                 FALSE,
@@ -77,19 +99,23 @@ Route::get('/init', function () {
                 '3 months plan',
                 'billed every quarter',
                 117.6,
+                117.6,
                 PackageCurrency::USD,
                 PackageDuration::Quarter,
+                29,
                 50,
                 True,
                 FALSE,
             ),
             new Package(
-                2,
+                3,
                 '1 day trial',
                 'renews in 24 hours',
                 39.20,
+                39.20,
                 PackageCurrency::USD,
                 PackageDuration::Day,
+                30,
                 30,
                 False,
                 TRUE,

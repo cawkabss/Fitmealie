@@ -11,10 +11,10 @@ type InputProps = React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputEle
 type Props = BaseProps & InputProps
 
 export const Checkbox = ({
-  label,
   checked,
   className,
   onChange,
+  children,
   ...props
 }: Props) => {
   return (
@@ -28,9 +28,9 @@ export const Checkbox = ({
         })}
         {...props}
       />
-      {label && (
+      {children && (
         <span className={css.label}>
-          {label}
+          {children}
         </span>
       )}
     </label>
